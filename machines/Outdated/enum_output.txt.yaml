@@ -1,0 +1,90 @@
+target:
+  host: 10.10.11.175
+credentials:
+  auth_method: 'null'
+  user: ''
+  password: ''
+  domain: ''
+  ticket_file: ''
+  nthash: ''
+  random_user: uutkovuv
+services: null
+is_parent_dc: true
+is_child_dc: false
+long_domain: outdated.htb
+domain: null
+nmblookup: null
+smb_dialects:
+  Supported dialects:
+    SMB 1.0: false
+    SMB 2.02: true
+    SMB 2.1: true
+    SMB 3.0: true
+    SMB 3.1.1: true
+  Preferred dialect: SMB 3.0
+  SMB1 only: false
+  SMB signing required: true
+smb_domain_info:
+  NetBIOS computer name: DC
+  NetBIOS domain name: OUTDATED
+  DNS domain: outdated.htb
+  FQDN: DC.outdated.htb
+  Derived membership: domain member
+  Derived domain: OUTDATED
+sessions:
+  sessions_possible: true
+  'null': true
+  password: false
+  kerberos: false
+  nthash: false
+  random_user: true
+rpc_domain_info:
+  Domain: null
+  Domain SID: null
+  Membership: null
+os_info:
+  OS: unknown
+  OS version: null
+  OS release: '1809'
+  OS build: '17763'
+  Native OS: not supported
+  Native LAN manager: not supported
+  Platform id: null
+  Server type: null
+  Server type string: to server.  Error was NT_STATUS_NOT_FOUND
+users: null
+groups: null
+shares: {}
+policy: null
+printers: null
+errors:
+  nmblookup:
+    enum_netbios:
+    - 'Could not get NetBIOS names information via ''nmblookup'': timed out'
+  domain:
+    enum_netbios:
+    - 'Could not get NetBIOS names information via ''nmblookup'': timed out'
+  rpc_domain_info:
+    enum_lsaquery_domain_info:
+    - Could not get workgroup/domain from lsaquery
+    - Could not get domain SID from lsaquery
+    - Could not determine if host is part of domain or part of a workgroup
+  users:
+    enum_users_rpc:
+    - Could not extract users from querydispinfo output, please open a GitHub issue
+    - Could not extract users from eumdomusers output, please open a GitHub issue
+  groups:
+    enum_groups_rpc:
+    - Could not parse result of 'enumalsgroups domain' command, please open a GitHub issue
+    - Could not parse result of 'enumalsgroups builtin' command, please open a GitHub issue
+    - Could not parse result of 'enumdomgroups' command, please open a GitHub issue
+  services:
+    enum_services:
+    - 'Could not get services via ''net rpc service list'': STATUS_ACCESS_DENIED'
+  policy:
+    enum_policy:
+    - 'SMB connection error on port 445/tcp: STATUS_ACCESS_DENIED'
+    - 'SMB connection error on port 139/tcp: session failed'
+  printers:
+    enum_printers:
+    - Could not parse result of enumprinters command, please open a GitHub issue

@@ -1,0 +1,66 @@
+# Nmap 7.92 scan initiated Sat Oct  8 19:24:06 2022 as: nmap -vvv -p 135,139,445,5985,47001 -sV -A -sC -vvv --script=vuln -T4 -oN nmap_output-10.129.70.136.txt 10.129.70.136
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.129.70.136
+Host is up, received reset ttl 127 (0.16s latency).
+Scanned at 2022-10-08 19:24:42 CST for 282s
+
+PORT      STATE SERVICE       REASON          VERSION
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+47001/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2012 R2 (91%), Microsoft Windows Server 2012 or Server 2012 R2 (86%), Microsoft Windows Server 2012 Data Center (86%), Microsoft Windows Server 2012 (86%), Microsoft Windows 10 1607 (86%), Microsoft Windows 7 SP1 (86%), Microsoft Windows Windows 7 SP1 (86%), Microsoft Windows Vista Home Premium SP1, Windows 7, or Windows Server 2008 (86%), Microsoft Windows Vista SP1 (86%), Microsoft Windows 10 1709 - 1909 (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=10/8%OT=135%CT=%CU=38854%PV=Y%DS=2%DC=T%G=N%TM=63415F14%P=x86_64-pc-linux-gnu)
+SEQ(SP=101%GCD=1%ISR=101%TI=I%CI=I%II=I%SS=S%TS=U)
+OPS(O1=M539NW8NNS%O2=M539NW8NNS%O3=M539NW8%O4=M539NW8NNS%O5=M539NW8NNS%O6=M539NNS)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)
+ECN(R=Y%DF=Y%T=80%W=FFFF%O=M539NW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   199.82 ms 10.10.14.1
+2   199.88 ms 10.129.70.136
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  8 19:29:24 2022 -- 1 IP address (1 host up) scanned in 317.72 seconds

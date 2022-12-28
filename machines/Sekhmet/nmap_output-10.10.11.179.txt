@@ -1,0 +1,22 @@
+# Nmap 7.93 scan initiated Sun Nov 20 14:31:57 2022 as: nmap -p- -Pn -sC -sV --min-rate=1000 -T4 -vvv -oN nmap_output-10.10.11.179.txt 10.10.11.179
+Nmap scan report for www.windcorp.htb (10.10.11.179)
+Host is up, received user-set (0.26s latency).
+Scanned at 2022-11-20 14:31:58 CST for 147s
+Not shown: 65533 filtered tcp ports (no-response)
+PORT   STATE SERVICE REASON          VERSION
+22/tcp open  ssh     syn-ack ttl 127 OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 8c7155df97275ed5375a8de2923bf36e (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCYB9WzfDTCPk3/b45jTVdevV6pVP8CpItvI127/jvvUPFD63ailHSgJCzAgY/fGl965kDjT5WN1oT4dDNaympvSONlZwo0+OYsKdkMMKUsnQJxPBIZbevNpbVoTx8Ilg4DPYpq3FXJLzQlPTjND6P8EjUma+ucpkTS3EN72TPRA/HthTaNCzlSgP6zp2egivLdT4mSnyx98Xwkm8FLc6xT5mnwA89JvyKpEdNjEZg0T7wAvn58G3YNZPtTE/Cz9zpY52FBXsTef0rUk+PCmm23C+UR8HRMCZuSqn0qWkm4/Nml18ucA4m2p4hXWi7Ch5sQABObBYNYx/v/b30ys6MzYXHTYhq+URf88zd7I1+NtPuUeS9RrRs01KDtcErh7ctsBM6QO0aZh53c1/gk/usqovX5w4t0kB6fokXLboJypl0hw0sIHH0xCYLb906IADhPEeNfjjOPr1iX5HCqq5Djyx6LiHqtjrtT3yqGTwkur2QbRJcIlJR+eP176owvNDE=
+|   256 b232f5889bfb58fa35b0710c9abd3cef (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJEd7x32eXrsJKVS9556PvIIKUYXHKwbyMLGpwNKA6vnIXEgYAW9WRtVh2tRgFB33BCNWj/XoMHmeG7iOTu8Gqs=
+|   256 eb73c0936e40c8f6b0a828937d18474c (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFFvHtH5w060SKZkz8kmeW9Rqnu0kPI01VoZ5rPkfsWi
+80/tcp open  http    syn-ack ttl 127 nginx 1.18.0
+|_http-title: 403 Forbidden
+|_http-server-header: nginx/1.18.0
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 20 14:34:25 2022 -- 1 IP address (1 host up) scanned in 147.92 seconds

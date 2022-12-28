@@ -1,0 +1,55 @@
+# Nmap 7.92 scan initiated Sat Oct  8 19:17:36 2022 as: nmap -vvv -p 21 -sV -A -sC -vvv -oN nmap_output-10.129.17.213.txt 10.129.17.213
+Nmap scan report for 10.129.17.213
+Host is up, received echo-reply ttl 63 (0.20s latency).
+Scanned at 2022-10-08 19:17:37 CST for 11s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 63 vsftpd 3.0.3
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.42
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 4
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0              32 Jun 04  2021 flag.txt
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 4.15 - 5.6 (95%), Linux 5.4 (95%), Linux 5.3 - 5.4 (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 2.6.32 (94%), Linux 5.0 (94%), Linux 5.0 - 5.3 (94%), Linux 5.0 - 5.4 (93%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=10/8%OT=21%CT=%CU=44414%PV=Y%DS=2%DC=T%G=N%TM=63415C5C%P=x86_64-pc-linux-gnu)
+SEQ(SP=FF%GCD=1%ISR=102%TI=Z%CI=Z%II=I%TS=A)
+OPS(O1=M539ST11NW7%O2=M539ST11NW7%O3=M539NNT11NW7%O4=M539ST11NW7%O5=M539ST11NW7%O6=M539ST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%T=40%W=FAF0%O=M539NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 5.569 days (since Mon Oct  3 05:38:10 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   197.83 ms 10.10.14.1
+2   197.92 ms 10.129.17.213
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  8 19:17:48 2022 -- 1 IP address (1 host up) scanned in 12.93 seconds

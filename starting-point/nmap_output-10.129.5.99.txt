@@ -1,0 +1,61 @@
+# Nmap 7.92 scan initiated Sat Oct  8 19:55:20 2022 as: nmap -vvv -p 6379 -sV -A -sC -vvv --script=vuln -T4 -oN nmap_output-10.129.5.99.txt 10.129.5.99
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.129.5.99
+Host is up, received echo-reply ttl 63 (0.20s latency).
+Scanned at 2022-10-08 19:55:56 CST for 14s
+
+PORT     STATE SERVICE REASON         VERSION
+6379/tcp open  redis   syn-ack ttl 63 Redis key-value store 5.0.7
+| vulners: 
+|   cpe:/a:redislabs:redis:5.0.7: 
+|     	CVE-2021-32762	9.0	https://vulners.com/cve/CVE-2021-32762
+|     	CVE-2021-32626	6.5	https://vulners.com/cve/CVE-2021-32626
+|     	CVE-2021-21309	6.5	https://vulners.com/cve/CVE-2021-21309
+|     	CVE-2021-41099	6.0	https://vulners.com/cve/CVE-2021-41099
+|     	CVE-2021-32761	6.0	https://vulners.com/cve/CVE-2021-32761
+|     	CVE-2021-32687	6.0	https://vulners.com/cve/CVE-2021-32687
+|     	CVE-2021-32628	6.0	https://vulners.com/cve/CVE-2021-32628
+|     	CVE-2021-32627	6.0	https://vulners.com/cve/CVE-2021-32627
+|     	CVE-2021-3470	5.0	https://vulners.com/cve/CVE-2021-3470
+|     	CVE-2021-32675	5.0	https://vulners.com/cve/CVE-2021-32675
+|     	CVE-2020-21468	5.0	https://vulners.com/cve/CVE-2020-21468
+|     	CVE-2015-8080	5.0	https://vulners.com/cve/CVE-2015-8080
+|     	CVE-2021-32672	4.0	https://vulners.com/cve/CVE-2021-32672
+|_    	CVE-2020-14147	4.0	https://vulners.com/cve/CVE-2020-14147
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 4.15 - 5.6 (95%), Linux 5.0 (95%), Linux 5.0 - 5.4 (95%), Linux 5.3 - 5.4 (95%), Linux 2.6.32 (95%), Linux 5.0 - 5.3 (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 5.4 (94%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=10/8%OT=6379%CT=%CU=37400%PV=Y%DS=2%DC=T%G=N%TM=6341655A%P=x86_64-pc-linux-gnu)
+SEQ(SP=108%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)
+OPS(O1=M539ST11NW7%O2=M539ST11NW7%O3=M539NNT11NW7%O4=M539ST11NW7%O5=M539ST11NW7%O6=M539ST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=Y%T=40%W=FAF0%O=M539NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 6.888 days (since Sat Oct  1 22:37:19 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 6379/tcp)
+HOP RTT       ADDRESS
+1   199.79 ms 10.10.14.1
+2   199.84 ms 10.129.5.99
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  8 19:56:10 2022 -- 1 IP address (1 host up) scanned in 50.46 seconds

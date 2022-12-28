@@ -1,0 +1,49 @@
+# Nmap 7.92 scan initiated Sat Oct  8 19:18:58 2022 as: nmap -vvv -p 641 -sV -A -sC -vvv -oN nmap_output.txt 49.82.100.83
+Nmap scan report for 49.82.100.83
+Host is up, received timestamp-reply ttl 55 (0.019s latency).
+Scanned at 2022-10-08 19:18:59 CST for 9s
+
+PORT    STATE SERVICE REASON          VERSION
+641/tcp open  ssh     syn-ack ttl 245 Huawei VRP sshd (protocol 2.0)
+| ssh-hostkey: 
+|   2048 24:13:9f:a4:83:70:78:35:e9:80:ca:28:c6:5a:de:41 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAAEBAN7eulyCRNy45paRfO/rwLPm+2C+i5420+TrnNbrf9IQIZrA9BrUe/HqzUNdOa+o+stqeBkwXuFH5CiRLmBFKzfKF9YRwu5MRrS8dyZUwmhWqZ7PpdgANnsxqQUi8TlJb0GC2/2qtZlzmrAhhYVqiB+RlzaLktv2hJ0cdGuifhL5iijkttBYfWVZeadQVBPpHvyWHD95IJYlz6jX1Gn6NaOeN7YUBH1TXc1jrzBYs6JbeccUtjJrfbYGfr8VPMGnILDhp+OcE/6zuibmsFLcW//ufFxSFI/mwkBzj7uPBdQWsrXdcuNim7WSRL+fopxPzU6g7lAfxmldA9aNUZMk5JMAAAAVAMbEhOHwB2uK/K0wK5i1CjpUKr67AAABADrBF0bulZy9MPZpxX4pC8R8tbv9lq6SFXopxyNy/ooC6+07dr6BC0IhrY0y93I/g1n0a2b/eAXMP4bV1lvUJL1wZ37/Gs+bPM4CzUBGVg2kIDYgXG76sUhm5qEGDfYli+4xz+dLbFm0b+Wan75k+YLsNqZp/1l/t5pW4y7BWgZZPRfEByn1h8d0lZAXYrCAcCRWSy7nnG4dhnk1SHbMZiodPeHRLHnhAsCxDlycRCizrrkyeCbUzeUYmpPqUx4P+CGZ7zXfA4l2RThDT/OZJPBb8XrIjjQJkbXqCmKpFe5j9mDAkjYMXS15avIw23Rh98Fbbbplye+rJH2xPUlC4v8AAAEANKysrkbrnj+4bPVSkbFmvpnMscjzU6f757zVcXxP3lvk4igdrR8+IArXfOD6ufZPcsVJ5Lje45MetpNeUhDUNrQbDZaBTCW5XYm4dAIfjSSKr3XjWAaJE6LDqkRN/fstmqDMkQ0cohwdLKqhDN478rn/jRCvIvs/hv3gZA0E8ehJNc/PMIrJ6VSzvpmGFkRTI2DFEmDEu1Bnale2uAsr7rGEece8sucPOWzxkXnPOycG6Uxfs3/OrKVpyQShUvg7yyy+/B/l9vNf+HNGmW9f5OiQhetAeEd1raFq95BmKRKOZzUFJvbQ37zslOI3B/szOKnlnEwexfs0mTm2VERvYg==
+|   2048 d7:22:d9:a9:2d:e5:90:8f:b0:b7:11:c5:70:83:37:86 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAM7ilJoIkiTgq9d5EVwOEJuk2CVm9mfsZakLvG7MxwpuDo1tbanuQIOh2SJR3uInwXemxVY4XBb/XKlC5FK/2Rz/gz4VRw1mj7ds5n4lYK7Sg3XNF9qEH/ESyHL7z6LPj/Fha9vxC2Xo6EQnm4YkDVU88+8+iD1bfWhQlOqq+KJPSgkja5+crv2Liu9blFKyQvvd8CjlQSE/nDHINdwOEIjD0OzPR2KNjHNfYGppwVNbDCwq+ADajwphP52kzuUWs1le4hRvmDbZkyMHhLEaeTEyQPnN2P7I9gHym+yUk5MhAt7Nab4nlF7/igDJ8SbmKebQW60tOx1sCZJv7DdEj
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: ZyXEL ZyWALL 5 firewall (ZyNOS 4.04) (90%), 3Com 5500-EI switch (89%), Huawei Secospace USG6680 firewall (89%), Juniper Networks SSG 20 firewall (88%), 3Com Switch 4200G (87%), Linksys BEFSR41 EtherFast router (87%), Digi PortServer TS serial-to-Ethernet bridge (87%), OneAccess 1641 router (86%), Cisco ACE load balancer (85%), AVtech Room Alert 26W environmental monitor (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=10/8%OT=641%CT=%CU=%PV=N%DS=10%DC=T%G=N%TM=63415CAC%P=x86_64-pc-linux-gnu)
+SEQ(SP=106%GCD=1%ISR=10D%TI=I%TS=U)
+OPS(O1=M5A0%O2=M5A0%O3=M5A0%O4=M5A0%O5=M5A0%O6=M5A0)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=N%TG=FF%W=2000%O=M5A0%CC=N%Q=)
+T1(R=Y%DF=N%TG=FF%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=N)
+
+Network Distance: 10 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: VRP; CPE: cpe:/o:huawei:vrp
+
+TRACEROUTE (using port 641/tcp)
+HOP RTT      ADDRESS
+1   1.71 ms  192.168.4.1
+2   5.81 ms  153.99.216.1
+3   ...
+4   8.12 ms  221.6.160.173
+5   12.00 ms 219.158.119.46
+6   ... 7
+8   15.58 ms 222.184.63.246
+9   22.16 ms 218.2.38.166
+10  14.90 ms 49.82.100.83
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  8 19:19:08 2022 -- 1 IP address (1 host up) scanned in 10.25 seconds

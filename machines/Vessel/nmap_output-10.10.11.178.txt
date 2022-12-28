@@ -1,0 +1,4 @@
+# Nmap 7.93 scan initiated Mon Nov 21 16:26:35 2022 as: nmap -vvv -p 22,80 -sV -sC -vvv --min-rate=1000 -T4 -oN nmap_output-10.10.11.178.txt 10.10.11.178
+Nmap scan report for 10.10.11.178 [host down, received no-response]
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon Nov 21 16:26:36 2022 -- 1 IP address (0 hosts up) scanned in 1.35 seconds

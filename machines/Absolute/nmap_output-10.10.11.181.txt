@@ -1,0 +1,103 @@
+# Nmap 7.93 scan initiated Fri Oct 14 10:22:20 2022 as: nmap -vvv -p 53,80,88,135,139,389,445,464,593,636,5985,9389,3268,3269,47001,49254,49664,49665,49666,49667,49674,49673,49675,49684,49695,49696,49700 -sV -A -sC -vvv -script=vuln -oN nmap_output-10.10.11.181.txt 10.10.11.181
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.11.181
+Host is up, received echo-reply ttl 127 (0.23s latency).
+Scanned at 2022-10-14 10:22:56 CST for 1452s
+
+PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 127 Simple DNS Plus
+80/tcp    open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-server-header: Microsoft-IIS/10.0
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+88/tcp    open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2022-10-14 09:23:04Z)
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: absolute.htb0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+464/tcp   open  kpasswd5?     syn-ack ttl 127
+593/tcp   open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  ssl/ldap      syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: absolute.htb0., Site: Default-First-Site-Name)
+3268/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: absolute.htb0., Site: Default-First-Site-Name)
+3269/tcp  open  ssl/ldap      syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: absolute.htb0., Site: Default-First-Site-Name)
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+9389/tcp  open  mc-nmf        syn-ack ttl 127 .NET Message Framing
+47001/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+49254/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49673/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49674/tcp open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+49675/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49684/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49695/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49696/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49700/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows 10 1709 - 1909 (93%), Microsoft Windows Server 2012 (93%), Microsoft Windows Vista SP1 (92%), Microsoft Windows Longhorn (92%), Microsoft Windows 10 1709 - 1803 (91%), Microsoft Windows 10 1809 - 1909 (91%), Microsoft Windows Server 2012 R2 (91%), Microsoft Windows Server 2012 R2 Update 1 (91%), Microsoft Windows Server 2016 build 10586 - 14393 (91%), Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1 (91%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.93%E=4%D=10/14%OT=53%CT=%CU=42890%PV=Y%DS=2%DC=T%G=N%TM=6348CDAC%P=x86_64-pc-linux-gnu)
+SEQ(SP=106%GCD=1%ISR=10C%TI=I%CI=I%II=I%SS=S%TS=U)
+OPS(O1=M537NW8NNS%O2=M537NW8NNS%O3=M537NW8%O4=M537NW8NNS%O5=M537NW8NNS%O6=M537NNS)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)
+ECN(R=Y%DF=Y%T=80%W=FFFF%O=M537NW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)
+T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)
+T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_samba-vuln-cve-2012-1182: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   263.83 ms 10.10.16.1
+2   108.03 ms 10.10.11.181
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 14 10:47:08 2022 -- 1 IP address (1 host up) scanned in 1487.48 seconds

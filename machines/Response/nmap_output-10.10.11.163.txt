@@ -1,0 +1,24 @@
+# Nmap 7.93 scan initiated Mon Nov 21 16:14:55 2022 as: nmap -vvv -p 22,80 -sV -sC -vvv --min-rate=1000 -T4 -oN nmap_output-10.10.11.163.txt 10.10.11.163
+Nmap scan report for 10.10.11.163
+Host is up, received reset ttl 63 (0.26s latency).
+Scanned at 2022-11-21 16:14:56 CST for 24s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 e9a4394afb065d5782fc4a0e0be46b25 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDE1KYu433j6o1zwd3t+YOZDYAySvnXrEbjDng9NDWj8AIRnjheKRPLZnBLA2nkZ6FF18cyNc6sAQZuo+XmLNLhQeT4fOnSWD7UMNNNE1WIjbs5ii76SrzbB2eeb8xsaHLZ1cFmkb18imhvgXx/WMwflzfrMm6L6ocEme6opDzviEcQxzS2drsdL+XmHl9k5QdAhRlQcGFoR8tWUZ5DL4gP0CAdqB+lEGJbaBWBdYzw1JqX+EJfmzaYg2vJvV21F3Loyu9B0AB0N7qB5cbXE3CjgoJkA6aeYWBpDC2GVcU+RZfbPgapl4HeZ13zmK3CYPff6d3Qi2AwB3b44j+bCuUlaVnLepDCexFxMxD1efkZk/ntm4XsiZtYj58Pzmd9QPazpn9mXw1ycD+ADuB+gAsnvxEm9Id4k/aRVxCNw/BoLyvh+CgLYokoZpC/s+RhKYsXFasv0dzW+6GUfFPqpjzN4ISnWRLUy4WGAM/VvCbhVUrdcimicu8bq4/hiuvu6b0=
+|   256 a323e498dfb6911bf2ac2f1cc1469b15 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLM0UOxwUswSEZguStZWzb1SahzYwaUJ8deZMFzL4p3H9HbIeVdGQKynjuMaAoQLh3eHQMfq3GnjeS8cTsRawP8=
+|   256 fb105fda55a66b953df2e85c0336ff31 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOqIbg+0j1Y04WyZKNuQhVEnIEIprH6DAMjMkdVpG2U
+80/tcp open  http    syn-ack ttl 62 nginx 1.21.6
+|_http-title: Did not follow redirect to http://www.response.htb
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: nginx/1.21.6
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 21 16:15:20 2022 -- 1 IP address (1 host up) scanned in 24.96 seconds
