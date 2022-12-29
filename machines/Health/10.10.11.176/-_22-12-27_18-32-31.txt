@@ -1,0 +1,20 @@
+# Dirsearch started Tue Dec 27 18:32:45 2022 as: /usr/bin/dirsearch -u http://10.10.11.176/
+
+301   309B   http://10.10.11.176:80/js    -> REDIRECTS TO: http://10.10.11.176/js/
+403   277B   http://10.10.11.176:80/.htaccess_extra
+403   277B   http://10.10.11.176:80/.ht_wsr.txt
+403   277B   http://10.10.11.176:80/.htaccess_sc
+403   277B   http://10.10.11.176:80/.htaccess.sample
+403   277B   http://10.10.11.176:80/.htaccess.save
+403   277B   http://10.10.11.176:80/.htaccess.bak1
+403   277B   http://10.10.11.176:80/.htaccess.orig
+403   277B   http://10.10.11.176:80/.htaccess_orig
+403   277B   http://10.10.11.176:80/.htaccessBAK
+403   277B   http://10.10.11.176:80/.htaccessOLD
+403   277B   http://10.10.11.176:80/.htaccessOLD2
+403   277B   http://10.10.11.176:80/.httr-oauth
+403   277B   http://10.10.11.176:80/.htm
+403   277B   http://10.10.11.176:80/.html
+403   277B   http://10.10.11.176:80/.htpasswd_test
+403   277B   http://10.10.11.176:80/.htpasswds
+403   277B   http://10.10.11.176:80/.php

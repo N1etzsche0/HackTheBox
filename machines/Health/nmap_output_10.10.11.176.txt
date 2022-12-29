@@ -1,0 +1,33 @@
+# Nmap 7.93 scan initiated Tue Dec 27 18:26:15 2022 as: nmap -sC -sV -p- -vv --min-rate 1500 -oN nmap_output_10.10.11.176.txt 10.10.11.176
+Increasing send delay for 10.10.11.176 from 0 to 5 due to 101 out of 336 dropped probes since last increase.
+Increasing send delay for 10.10.11.176 from 5 to 10 due to 142 out of 473 dropped probes since last increase.
+Nmap scan report for 10.10.11.176
+Host is up, received syn-ack (0.26s latency).
+Scanned at 2022-12-27 18:26:15 CST for 71s
+Not shown: 65527 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE REASON      VERSION
+22/tcp    open     ssh     syn-ack     OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 32b7f4d42f45d330ee123b0367bbe631 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChNRnKkpENG89qQHjD+2Kt9H7EDTMkQpzin70Rok0geRogbYVckxywChDv3yYhaDWQ9RrsOcWLs3uGzZR9nCfXOE3uTENbSWV5GdCd3wQNmWcSlkTD4dRcZshaAoMjs1bwzhK+cOy3ZU/ywbIXdHvAz3+Xvyz5yoEnboWYdWtBNFniZ7y/mZtA/XN19sCt5PcmeY40YFSuaVy/PUQnozplBVBIN6W5gnSE0Y+3J1MLBUkvf4+5zKvC+WLqA394Y1M+/UcVcPAjo6maik1JZNAmquWWo+y+28PdXSm9F2p2HAvwJjXc96f+Fl80+P4j1yxrhWC5AZM8fNCX8FjD7Jl7
+|   256 86e15d8c2939acd7e815e649e235ed0c (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOR0vwVJwhe/5A7dkomT/li2XC2nvv6/4J6Oe8Xeyi/YQspx3RQGz3aG1sWTPstLu7yno0Z+Lk/GotRdyivSdLA=
+|   256 ef6bad64d5e45b3e667949f4ec4c239f (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINgiR3y8U+HenhKVoN1EFipbmC6EjO3fWwWPUqa8EeJh
+80/tcp    open     http    syn-ack     Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: HTTP Monitoring Tool
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+3000/tcp  filtered ppp     no-response
+25405/tcp filtered unknown no-response
+32719/tcp filtered unknown no-response
+34582/tcp filtered unknown no-response
+50439/tcp filtered unknown no-response
+64419/tcp filtered unknown no-response
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 27 18:27:26 2022 -- 1 IP address (1 host up) scanned in 71.36 seconds
