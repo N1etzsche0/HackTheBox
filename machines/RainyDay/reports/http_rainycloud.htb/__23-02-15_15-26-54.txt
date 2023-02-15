@@ -1,0 +1,8 @@
+# Dirsearch started Wed Feb 15 15:29:18 2023 as: /home/joker/.local/bin/dirsearch -u http://rainycloud.htb/
+
+308   239B   http://rainycloud.htb/api    -> REDIRECTS TO: http://rainycloud.htb/api/
+200   649B   http://rainycloud.htb/api/
+200     3KB  http://rainycloud.htb/login
+302   189B   http://rainycloud.htb/logout    -> REDIRECTS TO: /
+302   199B   http://rainycloud.htb/new    -> REDIRECTS TO: /login
+200     4KB  http://rainycloud.htb/register
