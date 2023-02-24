@@ -1,0 +1,2 @@
+***Hat Valley Product***
+item_id=1&item_name=Yellow Beanie&item_brand=Good Doggo&item_price=$39.90

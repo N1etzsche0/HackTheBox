@@ -1,0 +1,2 @@
+***Hat Valley Product***
+item_id=3&item_name=Straw Hat&item_brand=Sunny Summer&item_price=$70.00
