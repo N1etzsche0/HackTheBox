@@ -1,0 +1,4 @@
+# Dirsearch started Fri Feb 24 10:19:47 2023 as: /home/joker/.local/bin/dirsearch -u http://mentorquotes.htb/
+
+403   281B   http://mentorquotes.htb/server-status
+403   281B   http://mentorquotes.htb/server-status/
